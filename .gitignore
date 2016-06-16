@@ -1,0 +1,7 @@
+nbproject/
+.settings/
+.idea/
+.project
+*.log
+composer.lock
+model.types
