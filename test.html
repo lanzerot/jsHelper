@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="jsHelperClass.js"></script>
+    <script>
+        var testString = "text";
+        var testString2 = "my monkey Amelio and I";
+        var testArray = ["text", 2, 123, 4, "k", ""];
+        var testArray2 = [];
+        var testObject = {
+            name: function(){alert()},
+            inventedVar:null
+        };
+        var leoIsset;
+        var myfunction = "hello";
+
+        function hello(name, surname){
+            console.log("Hello " + name + " " + surname);
+        }
+
+        // lets try
+
+        if(!jsHelper.isset(leoIsset) || !jsHelper.isset(testObject.inventedVar)){
+            console.log("These vars are null or undefined");
+        }
+
+        if(jsHelper.isObject(testObject)){
+            console.log("This is a object");
+        }
+
+        if(testArray2.empty()){
+            console.log("The array is empty :( ");
+        }
+
+        jsHelper.callFunctionByName(myfunction, [ "Leandro", "Otero" ]);
+
+        console.log("TestString2 before: " + testString2);
+        console.log("TestString2 after replacement: " + testString2.strReplaceAll(" ",""));
+        console.log("TestString2 after replacement (only with 2): " + testString2.strReplaceAll(" ","",2));
+
+        if(testArray[5].empty()){
+           console.log("The string is empty :(");
+        }
+
+        if(testArray.in_array(123)){
+            console.log("Element found in the array :)")
+        }
+
+    </script>
 </head>
 <body>
 
