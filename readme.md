@@ -4,8 +4,7 @@ The main purspose of this class (what follow the new sintax of ES6) is provide a
 new features to the prototypes of javascript to make easier to check the variables.
 
 ### Functions and features
-**String.prototype.strReplaceAll** : It replaces all occurrences of a string for the string that you want. You can specify how many occurrences you want
-                                     to replace.
+**String.prototype.strReplaceAll** : It replaces all occurrences of a string for the string that you want. You can specify how many occurrences you want to replace.
 
 **String.prototype.empty** : It checks if your string is empty.
 
