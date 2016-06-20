@@ -103,4 +103,14 @@ class jsHelper{
         jsHelper.init();
         return typeof (element) == "string";
     }
+
+    static createDOMElement(newElement,container){
+        var element= document.createElement(newElement);
+        if(jsHelper.isset(newElement.text)){
+            element.appendChild(document.createTextNode(newElement.text));
+        }
+        if(jsHelper.isset(container) && !container.empty()){
+            document.getElementById(container).appendChild(element);
+        }
+    }
 }
