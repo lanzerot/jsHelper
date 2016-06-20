@@ -1,5 +1,6 @@
 /**
- * Created by Leandro on 17/06/2016.
+ * @author : Leandro Otero
+ * @email: leandro.ola@gmail.com
  */
 class jsHelper{
 
