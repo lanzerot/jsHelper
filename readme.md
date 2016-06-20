@@ -1,6 +1,8 @@
 #How to use JSHelper
 ### A little explanation
 The main purspose of this class (what follow the new sintax of ES6) is provide a list of methods to help developers to program faster. Besides this class add some
+
+
   new features to the prototypes of javascript to make easier to check the variables.
 
 ### Functions and features
@@ -15,4 +17,3 @@ The main purspose of this class (what follow the new sintax of ES6) is provide a
 if the function has them.
 **isObject** : it checks that what you pass as param is an object.
 **isString** : it checks that what you pass as param is an string.
-
