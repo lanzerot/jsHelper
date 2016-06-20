@@ -2,7 +2,6 @@
 ### A little explanation
 The main purspose of this class (what follow the new sintax of ES6) is provide a list of methods to help developers to program faster. Besides this class add some
 
-
   new features to the prototypes of javascript to make easier to check the variables.
 
 ### Functions and features
