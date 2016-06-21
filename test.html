@@ -21,7 +21,7 @@
         }
 
         // lets try
-
+        /*
         if(!jsHelper.isset(leoIsset) || !jsHelper.isset(testObject.inventedVar)){
             console.log("These vars are null or undefined");
         }
@@ -47,10 +47,16 @@
         if(testArray.in_array(123)){
             console.log("Element found in the array :)")
         }
-
+        */
+        window.onload = function(){
+            var newElement = {name:"a", text: "es un link"};
+            jsHelper.createDOMElement(newElement,"box1");
+        };
     </script>
 </head>
 <body>
+<div id ="box1">
 
+</div>
 </body>
 </html>

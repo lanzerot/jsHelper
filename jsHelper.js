@@ -105,7 +105,8 @@ class jsHelper{
     }
 
     static createDOMElement(newElement,container){
-        var element= document.createElement(newElement);
+        console.log(newElement);
+        var element = document.createElement(newElement.name);
         if(jsHelper.isset(newElement.text)){
             element.appendChild(document.createTextNode(newElement.text));
         }
