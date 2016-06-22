@@ -55,6 +55,14 @@ class jsHelper{
             Array.prototype.empty = function(){
                 return this.length == 0 ;
             };
+
+            /**
+             * This function give you the option to use getOwnPropertyNames directly as a function of any object
+             * @returns {Array}
+             */
+            Object.prototype.getPropertiesName = function(){
+                return Object.getOwnPropertyNames(this.valueOf());
+            }
         }
     }
 
@@ -104,14 +112,31 @@ class jsHelper{
         return typeof (element) == "string";
     }
 
+    /**
+     * This method create dom element with the properties thn you specify and in the element that you want
+     * @param newElement is and object that can contain 3 properties: name: name of element, text: the text that you want to show in the element and attrs: a object with the list of attributes of the element
+     * @param container is the name of the container of the element that you are going to create
+     */
     static createDOMElement(newElement,container){
-        console.log(newElement);
+        jsHelper.init();
+
         var element = document.createElement(newElement.name);
+        var parentContainer = document.getElementById(container);
         if(jsHelper.isset(newElement.text)){
             element.appendChild(document.createTextNode(newElement.text));
         }
-        if(jsHelper.isset(container) && !container.empty()){
-            document.getElementById(container).appendChild(element);
+
+        if(jsHelper.isset(newElement.attrs) && !newElement.attrs.getPropertiesName().empty()){
+            var properties = Object.getOwnPropertyNames(newElement.attrs);
+            //console.log(properties);
+            properties.forEach(function(prop){
+                element.setAttribute(prop, newElement.attrs[prop]);
+                console.log(newElement.attrs[prop]);
+            });
+        }
+
+        if(jsHelper.isset(parentContainer)){
+            parentContainer.appendChild(element);
         }
     }
 }
