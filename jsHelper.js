@@ -118,20 +118,19 @@ class jsHelper{
      * @param container is the name of the container of the element that you are going to create
      */
     static createDOMElement(newElement,container){
-        jsHelper.init();
 
+        jsHelper.init();
         var element = document.createElement(newElement.name);
         var parentContainer = document.getElementById(container);
+
         if(jsHelper.isset(newElement.text)){
             element.appendChild(document.createTextNode(newElement.text));
         }
 
         if(jsHelper.isset(newElement.attrs) && !newElement.attrs.getPropertiesName().empty()){
             var properties = Object.getOwnPropertyNames(newElement.attrs);
-            //console.log(properties);
             properties.forEach(function(prop){
                 element.setAttribute(prop, newElement.attrs[prop]);
-                console.log(newElement.attrs[prop]);
             });
         }
 
