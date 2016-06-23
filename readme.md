@@ -12,6 +12,8 @@ new features to the prototypes of javascript to make easier to check the variabl
 
 **Array.prototype.empty** : It checks if your array is empty.
 
+**Object.prototype.getPropertiesName** : This function give you the option to use getOwnPropertyNames directly as a function of any object
+
 ####Functions
 **isset** : It checks if the variable is not null and not undefined.
 
@@ -21,4 +23,6 @@ if the function has them.
 **isObject** : it checks that what you pass as param is an object.
 
 **isString** : it checks that what you pass as param is an string.
+
+**createDOMElement** : This method creates dom element with the properties that you specify and in the element that you want
 
