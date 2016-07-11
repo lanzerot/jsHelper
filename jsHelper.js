@@ -12,7 +12,6 @@ class jsHelper{
         if(!String.prototype.strReplaceAll){
             /**
              * It replaces all occurrences of a string
-             * @param string is the variable that you want to modify
              * @param search is what you want to search and replace
              * @param subject is the new value for each occurrence found
              * @param count is the times that you want to replace.If you dont specify this params or its values is less than 0 the function will replace all occurrences
@@ -29,6 +28,14 @@ class jsHelper{
                     }
                 }
                 return result;
+            };
+
+            /**
+             * It deletes all white spaces
+             * @returns the string without white spaces
+             */
+            String.prototype.fullTrim = function(){
+                return this.valueOf().strReplaceAll(" ","");
             };
 
             /**

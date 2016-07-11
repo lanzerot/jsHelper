@@ -14,6 +14,8 @@ new features to the prototypes of javascript to make easier to check the variabl
 
 **Object.prototype.getPropertiesName** : This function give you the option to use getOwnPropertyNames directly as a function of any object
 
+**String.prototype.fullTrim** : This function trim all white spaces
+
 ####Functions
 **isset** : It checks if the variable is not null and not undefined.
 
