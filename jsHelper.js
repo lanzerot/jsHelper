@@ -18,9 +18,9 @@ class jsHelper{
              * @returns string
              */
             String.prototype.strReplaceAll = function(search, subject, count){
-                var result = this.valueOf();
-                var loops = jsHelper.isset(count) && count > 0 ? count : result.length;
-                for(var i = 0;i<loops;i++){
+                let result = this.valueOf();
+                let loops = jsHelper.isset(count) && count > 0 ? count : result.length;
+                for(let i = 0;i<loops;i++){
                     if(result.indexOf(search) != -1){
                         result = result.replace(search, subject);
                     }else{
@@ -127,15 +127,15 @@ class jsHelper{
     static createDOMElement(newElement,container){
 
         jsHelper.init();
-        var element = document.createElement(newElement.name);
-        var parentContainer = document.getElementById(container);
+        let element = document.createElement(newElement.name);
+        let parentContainer = document.getElementById(container);
 
         if(jsHelper.isset(newElement.text)){
             element.appendChild(document.createTextNode(newElement.text));
         }
 
         if(jsHelper.isset(newElement.attrs) && !newElement.attrs.getPropertiesName().empty()){
-            var properties = Object.getOwnPropertyNames(newElement.attrs);
+            let properties = Object.getOwnPropertyNames(newElement.attrs);
             properties.forEach(function(prop){
                 element.setAttribute(prop, newElement.attrs[prop]);
             });
